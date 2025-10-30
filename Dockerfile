@@ -1,8 +1,9 @@
-# Use small NGINX image
 FROM nginx:alpine
 
-# Copy your website files into the default NGINX web root
+# Copy your site files
 COPY . /usr/share/nginx/html
 
-# Expose port 80 for web traffic
+# Copy custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
