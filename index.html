@@ -1,12 +1,180 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Aliudin's Portfolio</title>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Aliudin Saleh</h1>
-  <p>Hello I am Aliudin. And this is going to be my website</p>
-  <br>
-  <img src="imgs/what_a_sigma.jpg" width="100" />
+    <div id="alert-container"></div>
+
+    <div id="scrollable-content">
+        <!-- Content goes here -->
+
+        <h1>Todo List</h1>
+        <div id="todo-container">
+            <div id="todo-input">
+                <input type="text" id="todo-text" placeholder="Enter a task" />
+                <button id="add-button" class="btn btn-primary"><i class="fas fa-plus"></i></button>
+                <button id="clear-button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+            </div>
+            <div id="todo-items"></div>
+
+        </div>
+
+        <button id="manual-button" class="btn btn-secondary"><i class="fas fa-question"></i> User Manual</button>
+
+        <!-- User Manual Dialog -->
+        <div id="manual-dialog" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">User Manual</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- User manual content goes here -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean vel elit nunc. Donec rhoncus
+                            feugiat nisl, eget bibendum purus lobortis vitae. Morbi consequat ullamcorper tempor. Ut
+                            eleifend malesuada augue ut blandit. Integer vulputate dolor nec pharetra gravida. Sed
+                            venenatis ante vitae eros fringilla malesuada.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Edit Todo Item Dialog -->
+        <div id="edit-dialog" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit Todo Item</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="edit-form">
+                            <div class="mb-3">
+                                <label for="edit-text" class="form-label">Edit Text:</label>
+                                <input type="text" class="form-control" id="edit-text">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" id="cancel-button">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            // Handle click event on manual button
+            $(document).ready(function () {
+                // Handle click event on manual button
+                $('#manual-button').click(function () {
+                    $('#manual-dialog').modal('show');
+                });
+            });
+
+        </script>
+    </div>
+
 </body>
+
+</html>
